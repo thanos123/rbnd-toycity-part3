@@ -22,6 +22,10 @@ class Product
     nil
   end
 
+  def self.in_stock
+    return @@products.select{ |product| product.stock > 0 }
+  end
+
   # checks if current product is in stock
   def in_stock?
     @stock > 0

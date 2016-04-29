@@ -1,0 +1,13 @@
+How long did you spend working on this project?
+about 3 hours
+
+What was the most rewarding challenge you conquered?
+my 1st new feature which involved returning products. I had to think about misc things, eg removing stock and transactions from the customer
+
+What two additional features did you build? Why?
+my 1st new feature is returning products and the 2nd a couple more methods for looking for transactions.
+Both would be useful and time-saving for whoever is using the system which would result to better customer service.
+
+Where do you still have room to grow?
+- working on more complex scenarios and remembering to include all necessary adjustments!
+- organising errors / exceptions

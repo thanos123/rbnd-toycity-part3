@@ -15,11 +15,18 @@ class Product
   private
 
   def add_to_products
-    @@products.each do |product| 
-      if title == product.title
-        raise DuplicateProductError, "#{title} already exists."
-      end
+    product = Product.find_by_title(@title)
+    if ! product.nil?
+      raise DuplicateProductError, "#{title} already exists."
     end
     @@products << self
+  end
+
+  # looks for a product with the tile. returns nil if nothing found
+  def self.find_by_title(title)
+    @@products.each do |product| 
+      return product if title == product.title
+    end
+    nil
   end
 end

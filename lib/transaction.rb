@@ -14,6 +14,13 @@ class Transaction
     @@transactions
   end
 
+  # finds a transaction by id
+  def self.find(id)
+    @@transactions.each do |transaction| 
+      return transaction if id == transaction.id
+    end
+  end
+
   private
 
   def add_to_transactions

@@ -20,6 +20,14 @@ class Customer
     nil
   end
 
+  # creates a new transaction for this customer with the passed product
+  def purchase(product)
+    if !product.in_stock?
+      raise OutOfStockError, "#{product.title} is out of stock."
+    end
+    Transaction.new(self, product)
+  end
+
   private
 
   def add_to_customers

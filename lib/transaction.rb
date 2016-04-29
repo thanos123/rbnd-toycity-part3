@@ -7,6 +7,7 @@ class Transaction
     @customer = customer
     @product = product
     @id = @@transactions.count + 1
+    product.stock -= 1
     add_to_transactions
   end
 

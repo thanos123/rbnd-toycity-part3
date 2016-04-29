@@ -31,7 +31,6 @@ class Customer
       raise OutOfStockError, "#{product.title} is out of stock."
     end
     Transaction.new(self, product)
-    product.stock -= 1
   end
 
   # a method for returning products

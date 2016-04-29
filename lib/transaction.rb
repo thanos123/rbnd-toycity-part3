@@ -33,6 +33,20 @@ class Transaction
     end
   end
 
+  # find all transactions for product
+  def self.find_by_product(product)
+    return @@transactions.select do |transaction|
+      transaction.product == product
+    end
+  end
+
+  # find all transactions for product and customer
+  def self.find_by_product_and_customer(product, customer)
+    return @@transactions.select do |transaction|
+      transaction.product == product && ransaction.customer == customer
+    end
+  end
+
   private
 
   def add_to_transactions

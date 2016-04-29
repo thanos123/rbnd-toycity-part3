@@ -21,6 +21,18 @@ class Transaction
     end
   end
 
+  # removes a transaction
+  def self.delete(transaction)
+    @@transactions.delete(transaction)
+  end
+
+  # find all transactions for customer
+  def self.find_by_customer(customer)
+    return @@transactions.select do |transaction|
+      transaction.customer == customer
+    end
+  end
+
   private
 
   def add_to_transactions

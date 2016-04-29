@@ -8,3 +8,7 @@ end
 
 class OutOfStockError < StandardError
 end
+
+
+class NotPurchasedError < StandardError
+end

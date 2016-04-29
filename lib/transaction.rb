@@ -2,11 +2,13 @@ class Transaction
   attr_reader :product, :customer, :id
 
   @@transactions = []
+  @@id = 0
 
   def initialize(customer, product)
     @customer = customer
     @product = product
-    @id = @@transactions.count + 1
+    @@id += 1
+    @id = @@id
     product.stock -= 1
     add_to_transactions
   end
